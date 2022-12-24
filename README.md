@@ -1,1 +1,1 @@
-# Selenide
+# Selenide course

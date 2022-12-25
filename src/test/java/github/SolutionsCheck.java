@@ -25,7 +25,8 @@ public class SolutionsCheck {
  void dragAndDropTriangleonHerokuapp() {
   open("https://the-internet.herokuapp.com/drag_and_drop");
   $(("#column-a")).dragAndDropTo($("#column-b"));
-  $$("#columns div").first().shouldHave(text("B"));
+  $("#column-a header").shouldHave(text("B"));
+  $("#column-b header").shouldHave(text("A"));
   // попытки выполнить с actions
   // actions().moveToElement($("#column-a")).clickAndHold().moveToElement($("#column-b")).release().perform();
   //actions().moveToElement($("#column-a")).clickAndHold().moveByOffset(350,0).release().perform();

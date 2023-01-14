@@ -31,5 +31,14 @@ public class SolutionsCheck {
   // actions().moveToElement($("#column-a")).clickAndHold().moveToElement($("#column-b")).release().perform();
   //actions().moveToElement($("#column-a")).clickAndHold().moveByOffset(350,0).release().perform();
   // actions().clickAndHold($("#column-a")).moveToElement($("#column-b")).release().perform();
+
  }
 }
+
+/* Ответы на вопросы:
+1. Если разобрать на примере d-lg-flex: при поиске по локатору d-lg-flex находится 9 элементов, а при поиске ul.d-lg-flex находится только 1 элемент. То есть указывая ul.класс, мы сначала ищем первый ul, а уже потом в нем ищем класс
+2. Исходя из 1 пункта - по локатору ul.d-lg-flex находит 1 элемент, это шапка с разделами Product, Solutions и тд. Selenide находит этот элемент и кликает в середину этого элемента, тем самым попадая на Solutions
+3. Лучше всего использовать уникальные локаторы, которые вряд ли будут меняться в дальнейшем. Поиск по тексту - нормальная практика, допустим вот так:
+$(".Header-old").$(byText("Solutions")).hover();
+Мы ищем нужный нам элемент по тексту в конкретном блоке, а не по всей странице
+ */

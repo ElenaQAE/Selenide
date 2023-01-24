@@ -1,4 +1,4 @@
-package demoqa;
+package qa.demo;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
@@ -29,8 +29,10 @@ public class PracticeFormRegistration {
         String dateOfBirth = "1 January,2000";
         String subject = "Maths";
         String hobbies = "Sports";
-        String nameFile = "shiba.png";
+        String nameFile = "images/shiba.png";
         String stateAndCity = "NCR Delhi";
+        String state = "NCR";
+        String city = "Delhi";
 
         // Начало теста
         open("/automation-practice-form");

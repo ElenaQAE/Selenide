@@ -18,7 +18,7 @@ public class PracticeFormRegistrationPageObject extends TestBase {
                 dateOfBirth = "1 January,2000",
                 subject = "Maths",
                 hobbies = "Sports",
-                nameFile = "/shiba.png",
+                nameFile = "/images/shiba.png",
                 state = "NCR",
                 city = "Delhi";
 

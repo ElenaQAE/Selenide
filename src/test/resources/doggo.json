@@ -1,0 +1,10 @@
+{
+  "name": "Nova",
+  "breed": "Shiba Inu",
+  "color": "Orange",
+  "age": 2.5,
+  "friends": [
+    "Sharik",
+    "Rex"
+  ]
+}

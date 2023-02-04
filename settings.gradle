@@ -6,4 +6,6 @@ include 'src:untitled'
 findProject(':src:untitled')?.name = 'untitled'
 include 'src:main'
 findProject(':src:main')?.name = 'main'
+include 'src:main'
+findProject(':src:main')?.name = 'main'
 

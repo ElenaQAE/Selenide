@@ -15,7 +15,8 @@ dependencies {
             'com.codeborne:xls-test:1.4.3',
             'com.opencsv:opencsv:5.7.1',
             'com.fasterxml.jackson.core:jackson-core:2.14.1',
-            'com.fasterxml.jackson.core:jackson-databind:2.14.1')
+            'com.fasterxml.jackson.core:jackson-databind:2.14.1',
+            'com.github.javafaker:javafaker:1.0.2')
     runtimeOnly(
             "org.junit.jupiter:junit-jupiter:5.8.2",
             "org.slf4j:slf4j-simple:1.7.29")

@@ -9,7 +9,13 @@ repositories {
 dependencies {
     testImplementation (
             "com.codeborne:selenide:6.3.5",
-            "org.junit.jupiter:junit-jupiter:5.8.2")
+            "org.junit.jupiter:junit-jupiter:5.8.2",
+            'org.assertj:assertj-core:3.24.2',
+            'com.codeborne:pdf-test:1.8.0',
+            'com.codeborne:xls-test:1.4.3',
+            'com.opencsv:opencsv:5.7.1',
+            'com.fasterxml.jackson.core:jackson-core:2.14.1',
+            'com.fasterxml.jackson.core:jackson-databind:2.14.1')
     runtimeOnly(
             "org.junit.jupiter:junit-jupiter:5.8.2",
             "org.slf4j:slf4j-simple:1.7.29")

@@ -3,6 +3,8 @@ package jenkins_lesson_11;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+import static io.qameta.allure.Allure.step;
+
 public class PracticeFormRegistrationPageObject extends TestBase {
 
     TestData testData = new TestData();
@@ -11,26 +13,29 @@ public class PracticeFormRegistrationPageObject extends TestBase {
     @Test
     void studentRegistrationFormTest() {
 
+        step("Заполнение полей регистрации", () -> {
+                    registrationPage.openPage()
+                            .setFirstName(testData.firstName)
+                            .setLastName(testData.lastName)
+                            .setUserEmail(testData.email)
+                            .setGender(testData.gender)
+                            .setUserPhoneNumber(testData.telNumber)
+                            .setBirthDate(
+                                    testData.dayMonthYear[0],
+                                    testData.dayMonthYear[1],
+                                    testData.dayMonthYear[2])
+                            .setSubject(testData.subject)
+                            .setHobbie(testData.hobbies)
+                            .uploadFile(testData.picture)
+                            .setAddress(testData.address)
+                            .selectState(testData.state)
+                            .selectCity(testData.city);
+                });
 
-        registrationPage.openPage()
-                .setFirstName(testData.firstName)
-                .setLastName(testData.lastName)
-                .setUserEmail(testData.email)
-                .setGender(testData.gender)
-                .setUserPhoneNumber(testData.telNumber)
-                .setBirthDate(
-                        testData.dayMonthYear[0],
-                        testData.dayMonthYear[1],
-                        testData.dayMonthYear[2])
-                .setSubject(testData.subject)
-                .setHobbie(testData.hobbies)
-                .uploadFile(testData.picture)
-                .setAddress(testData.address)
-                .selectState(testData.state)
-                .selectCity(testData.city);
-
-        registrationPage.clickSubmitButton();
-
+        step("Нажатие на кнопку подтверждения", () -> {
+                    registrationPage.clickSubmitButton();
+                });
+        step("Проверка результатов заполнения", () -> {
         registrationPage.verifyResultsModalAppears()
                 .verifyResult("Student Name", testData.firstName + " " + testData.lastName)
                 .verifyResult("Student Email", testData.email)
@@ -42,5 +47,6 @@ public class PracticeFormRegistrationPageObject extends TestBase {
                 .verifyResult("Picture", testData.picture)
                 .verifyResult("Address", testData.address)
                 .verifyResult("State and City", testData.state + " " + testData.city);
+        });
     }
 }

@@ -1,11 +1,13 @@
 package jenkins_lesson_11;
 
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 public class PracticeFormRegistrationPageObject extends TestBase {
 
     TestData testData = new TestData();
 
+    @Tag("run_on_jenkins")
     @Test
     void studentRegistrationFormTest() {
 

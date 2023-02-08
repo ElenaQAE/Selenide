@@ -9,7 +9,7 @@ public class PracticeFormRegistrationPageObject extends TestBase {
 
     TestData testData = new TestData();
 
-    @Tag("run_on_jenkins")
+    @Tag("run_on_jenkins2")
     @Test
     void studentRegistrationFormTest() {
 

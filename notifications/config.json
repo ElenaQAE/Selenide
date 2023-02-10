@@ -4,7 +4,7 @@
     "project": "QA.GURU lesson13",
     "environment": "",
     "comment": "test",
-    "reportLink": "https://jenkins.autotests.cloud/",
+    "reportLink": "https://jenkins.autotests.cloud/job/test%2012/3/allure/",
     "language": "ru",
     "allureFolder": "allure-report/",
     "enableChart": true

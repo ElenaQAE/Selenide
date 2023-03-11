@@ -32,7 +32,8 @@ dependencies {
             'com.fasterxml.jackson.core:jackson-core:2.14.1',
             'com.fasterxml.jackson.core:jackson-databind:2.14.1',
             'com.github.javafaker:javafaker:1.0.2',
-            'io.qameta.allure:allure-selenide:2.20.1')
+            'io.qameta.allure:allure-selenide:2.20.1',
+            'io.rest-assured:rest-assured:5.3.0')
     runtimeOnly(
             "org.junit.jupiter:junit-jupiter:5.8.2",
             "org.slf4j:slf4j-simple:1.7.29")

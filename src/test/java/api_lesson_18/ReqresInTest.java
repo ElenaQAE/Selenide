@@ -1,4 +1,4 @@
-package api_lesson18;
+package api_lesson_18;
 
 import io.restassured.http.ContentType;
 import org.junit.jupiter.api.DisplayName;

@@ -1,4 +1,4 @@
-package selenoid_lesson12;
+package selenoid_lesson_12;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;

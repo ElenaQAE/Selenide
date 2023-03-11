@@ -1,4 +1,4 @@
-package selenoid_lesson12;
+package selenoid_lesson_12;
 
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;

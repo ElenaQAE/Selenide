@@ -12,7 +12,6 @@ import static io.restassured.filter.log.LogDetail.STATUS;
 
 public class TestSpecs {
 
-
     public static RequestSpecification testRequestSpec = with()
             .log().uri()
             .log().headers()

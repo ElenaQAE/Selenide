@@ -1,6 +1,7 @@
 plugins {
     id 'java-library'
     id 'io.qameta.allure' version '2.11.2'
+    id "io.freefair.lombok" version "6.5.1"
 }
 
 allure {
@@ -33,10 +34,11 @@ dependencies {
             'com.fasterxml.jackson.core:jackson-databind:2.14.1',
             'com.github.javafaker:javafaker:1.0.2',
             'io.qameta.allure:allure-selenide:2.20.1',
-            'io.rest-assured:rest-assured:5.3.0')
+            'io.rest-assured:rest-assured:5.3.0',
+            'io.qameta.allure:allure-rest-assured:2.21.0')
     runtimeOnly(
             "org.junit.jupiter:junit-jupiter:5.8.2",
-            "org.slf4j:slf4j-simple:1.7.29")
+            "org.slf4j:slf4j-simple:1.7.29",)
 }
 
 tasks.withType(JavaCompile) {
@@ -56,6 +58,12 @@ task run_on_jenkins(type: Test) {
     task run_on_jenkins2(type: Test) {
         useJUnitPlatform {
             includeTags("run_on_jenkins")
+        }
+    }
+
+    task reqres_test(type: Test) {
+        useJUnitPlatform {
+            includeTags("reqres_in")
         }
     }
 }

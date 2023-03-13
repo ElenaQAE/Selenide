@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-import static specs.TestSpecs.testRequestSpec;
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
+import static specs.TestSpecs.testRequestSpec;
 import static specs.TestSpecs.testResponseSpec;
 
 public class ReqresInExtendedTest extends TestBase {
